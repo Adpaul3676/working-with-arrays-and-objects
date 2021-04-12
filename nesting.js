@@ -52,7 +52,16 @@ var employees = [
 
 //Code Here
 
-
+function employeeUpdater () {
+  for (let emp in employees) {  
+    if (emp[firstName] === 'Theo') {
+      delete emp
+    } else if (emp[firstName] === 'Lorie') {
+      emp[department] = 'HR';
+    }
+  }
+  return employees
+}
 
 ////////// PROBLEM 2 //////////
 
