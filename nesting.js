@@ -53,11 +53,11 @@ var employees = [
 //Code Here
 
 function employeeUpdater () {
-  for (let emp in employees) {  
-    if (emp[firstName] === 'Theo') {
-      delete emp
-    } else if (emp[firstName] === 'Lorie') {
-      emp[department] = 'HR';
+  for (let i = 0; i < employees.length; i++) {  
+    if (employees[i].firstName === 'Theo') {
+      employees.splice (i, 1)
+    } else if (employees[i].firstName === 'Lorie') {
+      employees[i].department = 'HR';
     }
   }
   return employees
@@ -79,7 +79,17 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 
 //Code Here
 
-
+function removeDuplicates (arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] === arr[j]) {
+        arr.splice (j, 1)
+        j--
+      }
+    }
+  }
+  return arr
+}
 
 ////////// PROBLEM 3 //////////
 
@@ -105,9 +115,11 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+//Code Here]
+
+
+var grumpyActivity = car.activities;
+var fluffy2ndFriend = cat.name;
 
 
 
@@ -149,7 +161,14 @@ var myCar = {
 
 //Code Here
 
-
+function recordCleaner (obj) {
+  for (let i = 0; i < obj.accidents.length; i++) {
+    if (obj.accidents[i] === true) {
+      obj.accidents[i] = false;
+    } 
+  }
+  return obj
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -168,4 +187,15 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
 //Code Here
 
-
+function looper (arr) {
+  for (i=0; i < arr.length; i++){
+    for (j=0; j < arr[i].length; j++){
+      if (arr[i][j] % 2 === 0) {
+        arr[i].splice (j, 1, "even")
+      } else {
+        arr[i].splice (j, 1, "odd")
+      }
+    }
+  }
+  return arr
+}
