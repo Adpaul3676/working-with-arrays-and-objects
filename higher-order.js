@@ -147,8 +147,8 @@ const purchases = [{"owner":"Barry","price":103},{"owner":"Bob","price":75},
 */
 
 let bobsTotal = purchases.reduce (function (acc, cur) {
-  if (cur[owner] === 'Bob') {
-    return acc + (cur[price])
+  if (cur.owner === 'Bob') {
+    return acc + (cur.price)
   } else {
     return acc;
   }
