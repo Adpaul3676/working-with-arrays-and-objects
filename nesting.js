@@ -115,13 +115,10 @@ var cat = {
     2. Assign fluffy2ndFriend the name of Fluffy's 2nd friend.
 */
 
-//Code Here]
+//Code Here
 
-
-var grumpyActivity = car.activities;
-var fluffy2ndFriend = cat.name;
-
-
+let grumpyActivity = cat.catFriends[0].activities[1]
+let fluffy2ndFriend = cat.catFriends[1].name  
 
 ////////// PROBLEM 4 //////////
 
@@ -161,13 +158,10 @@ var myCar = {
 
 //Code Here
 
-function recordCleaner (obj) {
-  for (let i = 0; i < obj.accidents.length; i++) {
-    if (obj.accidents[i] === true) {
-      obj.accidents[i] = false;
-    } 
-  }
-  return obj
+function recordCleaner () {
+  for (let i = 0; i < myCar.accidents.length; i++) {
+    myCar.accidents[i].atFaultForAccident = false;
+  } 
 }
 
 ////////// PROBLEM 5 //////////
