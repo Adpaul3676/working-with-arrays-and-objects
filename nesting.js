@@ -181,15 +181,15 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 
 //Code Here
 
-function looper (arr) {
-  for (i=0; i < arr.length; i++){
-    for (j=0; j < arr[i].length; j++){
-      if (arr[i][j] % 2 === 0) {
-        arr[i].splice (j, 1, "even")
+function looper () {
+  for (i=0; i < numsArr.length; i++){
+    for (j=0; j < numsArr[i].length; j++){
+      if (numsArr[i][j] % 2 === 0) {
+        numsArr[i].splice (j, 1, "even")
       } else {
-        arr[i].splice (j, 1, "odd")
+        numsArr[i].splice (j, 1, "odd")
       }
     }
   }
-  return arr
+  return numsArr
 }
